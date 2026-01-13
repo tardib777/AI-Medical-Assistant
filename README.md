@@ -40,6 +40,7 @@ php artisan key:generate
 php artisan migrate
 php artisan serve
 ```
+
 # After Installation
 
 First, Get your own Ollama API Key from the link: https://www.ollama.com . 
@@ -50,3 +51,6 @@ Finally, Add in .env file the key: OLLAMA_API_KEY = YOUR_OWN_KEY
 # API Documentation
 
 visit the link: https://documenter.getpostman.com/view/39149211/2sBXVhBq75
+
+# Note
+The model require VPN to run in some countries.
