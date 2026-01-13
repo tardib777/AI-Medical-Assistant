@@ -53,4 +53,4 @@ Finally, Add in .env file the key: OLLAMA_API_KEY = YOUR_OWN_KEY
 visit the link: https://documenter.getpostman.com/view/39149211/2sBXVhBq75
 
 # Note
-The model require VPN to run in some countries.
+Ollama Cloud models requires VPN in some countries
