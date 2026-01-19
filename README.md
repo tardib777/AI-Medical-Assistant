@@ -8,7 +8,7 @@ The system allows users to create medical sessions, send symptoms, receive AI re
 # Features
 
 - User authentication using Laravel Sanctum
-- Medical sessions per user
+- Medical sessions per user, each session it`s duration is only 30 minutes  
 - AI-powered medical chatbot
 - Session-based conversation history
 - Automatic session expiration
