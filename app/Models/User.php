@@ -8,11 +8,11 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
 use Laravel\Sanctum\HasApiTokens;
-
+use Spatie\Permission\Traits\HasRoles;
 class User extends Authenticatable 
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasApiTokens,HasFactory, Notifiable;
+    use HasApiTokens,HasFactory, Notifiable, HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -60,6 +60,13 @@ class User extends Authenticatable
     }
     public function Sessions(){
         return $this->hasMany(MedicalSession::class);
+    }
+    public function doctor(){
+        return $this->hasOne(Doctor::class);
+    }
+    public function bookings()
+    {
+        return $this->hasMany(Booking::class);
     }
     protected static function boot()
     {
