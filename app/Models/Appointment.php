@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Appointment extends Model
+{
+    protected $fillable = ['doctor_id', 'patient_id', 'scheduled_at', 'duration_minutes', 'status'];
+    protected $casts = [
+        'scheduled_at' => 'datetime',
+    ];
+
+    public function doctor(){
+        return $this->belongsTo(DoctorProfile::class, 'doctor_id');
+    }
+    public function patient(){
+        return $this->belongsTo(User::class, 'patient_id');
+    }
+}

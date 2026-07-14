@@ -62,6 +62,9 @@ class User extends Authenticatable
     public function Sessions(){
         return $this->hasMany(MedicalSession::class);
     }
+    public function doctorProfile(){
+        return $this->hasOne(DoctorProfile::class);
+    }
     protected static function boot()
     {
         parent::boot();
